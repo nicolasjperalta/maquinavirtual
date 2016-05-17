@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1463515991 source:/home/nico/Documents/Maquina_Virtual/maquinavirtual/main.cpp
+	<iostream>
+	"vm_base.h"
+
+1463516170 /home/nico/Documents/Maquina_Virtual/maquinavirtual/include/vm_base.h
+	<iostream>
+	<map>
+
+1463516127 source:/home/nico/Documents/Maquina_Virtual/maquinavirtual/src/vm_base.cpp
+	"vm_base.h"
+

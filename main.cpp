@@ -1,7 +1,9 @@
 #include <iostream>
-
+#include "vm_base.h"
 
 int main()
 {
-      return 0;
+    vm_base vm;
+    vm.execute();
+    return 0;
 }
