@@ -12,6 +12,7 @@ class vm_base
     public:
         vm_base();
         virtual ~vm_base();
+        void addByte(char byte);
         float execute();
         void push(float nValue);
         float pop();

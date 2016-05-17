@@ -9,8 +9,7 @@ vm_base::vm_base()
     m_stack_size = 0;
     m_cursor = 0;
     m_functable[0x00] = test1;
-    m_instructions[0] = 0x00;
-    m_program_size = 1;
+    m_program_size = 0;
 
 }
 
@@ -34,4 +33,7 @@ float vm_base::execute(){
     }
 
     return 0;
+}
+void vm_base::addByte(char byte){
+    m_instructions[m_program_size++] = byte;
 }
