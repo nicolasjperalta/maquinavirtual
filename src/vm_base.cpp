@@ -1,4 +1,4 @@
-#include "vm_base.h"
+#include "../include/vm_base.h"
 
 void test1(vm_base* vm,int* cursor){
     std::cout << "Hola";
