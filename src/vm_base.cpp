@@ -1,11 +1,16 @@
 #include "../include/vm_base.h"
 
-void test1(vm_base* vm,int* cursor){
-    std::cout << "Hola";
+void test1(vm_base& vm,int* cursor){
+    vm << "hola";
 }
 
-vm_base::vm_base()
+std::ostream& vm_base::operator<< ( const std::string& str){
+    m_out << str;
+}
+
+vm_base::vm_base(std::ostream & out) : m_out(out)
 {
+
     m_stack_size = 0;
     m_cursor = 0;
     m_functable[0x00] = test1;
@@ -29,7 +34,7 @@ float vm_base::pop(){
 float vm_base::execute(){
 
     for(int i=0; i < m_program_size; i++){
-        m_functable[m_instructions[i]](this,&i);
+        m_functable[m_instructions[i]](*this,&i);
     }
 
     return 0;
